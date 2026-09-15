@@ -12,8 +12,8 @@ el código y qué experimentos se pueden hacer en clase.
   - [Índice](#índice)
   - [1. Detección de rostros: la idea general](#1-detección-de-rostros-la-idea-general)
   - [2. La API Tasks vs. la API clásica](#2-la-api-tasks-vs-la-api-clásica)
-    - [API clásica: `mp.solutions`](#api-clásica-mpsolutions)
-    - [API moderna: `mediapipe.tasks`](#api-moderna-mediapipetasks)
+    - [2.1. API clásica: `mp.solutions`](#21-api-clásica-mpsolutions)
+    - [2.2. API moderna: `mediapipe.tasks`](#22-api-moderna-mediapipetasks)
   - [3. ¿Qué devuelve el detector?](#3-qué-devuelve-el-detector)
   - [4. Cómo funciona el modelo por dentro](#4-cómo-funciona-el-modelo-por-dentro)
   - [5. Requisitos e instalación](#5-requisitos-e-instalación)
@@ -36,13 +36,13 @@ Eso es importante: El modelo ve *formas*, no *personas*.
 
 MediaPipe tuvo (y todavía tiene) dos APIs:
 
-### API clásica: `mp.solutions`
+### 2.1. API clásica: `mp.solutions`
 
 - Más simple
 - Los modelos están incluidos en el paquete de `mediapipe`
 - Está en modo "mantenimiento", Google ya no lo actualiza
 
-### API moderna: `mediapipe.tasks`
+### 2.2. API moderna: `mediapipe.tasks`
 - Requiere descargar el modelo aparte (un `.tflite`)
 - Es la API recomendada hoy
 - Permite cambiar el modelo según lo necesario
