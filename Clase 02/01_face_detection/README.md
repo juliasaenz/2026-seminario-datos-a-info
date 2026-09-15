@@ -11,13 +11,10 @@ el código y qué experimentos se pueden hacer en clase.
 - [Guía: Detección de Rostros con MediaPipe Tasks](#guía-detección-de-rostros-con-mediapipe-tasks)
   - [Índice](#índice)
   - [1. Detección de rostros: la idea general](#1-detección-de-rostros-la-idea-general)
-  - [2. La API Tasks vs. la API clásica](#2-la-api-tasks-vs-la-api-clásica)
-    - [2.1. API clásica: `mp.solutions`](#21-api-clásica-mpsolutions)
-    - [2.2. API moderna: `mediapipe.tasks`](#22-api-moderna-mediapipetasks)
-  - [3. ¿Qué devuelve el detector?](#3-qué-devuelve-el-detector)
-  - [4. Cómo funciona el modelo por dentro](#4-cómo-funciona-el-modelo-por-dentro)
-  - [5. Requisitos e instalación](#5-requisitos-e-instalación)
-  - [6. Ejecutar el código](#6-ejecutar-el-código)
+  - [2. ¿Qué devuelve el detector?](#2-qué-devuelve-el-detector)
+  - [3. Cómo funciona el modelo por dentro](#3-cómo-funciona-el-modelo-por-dentro)
+  - [4. Requisitos e instalación](#4-requisitos-e-instalación)
+  - [5. Ejecutar el código](#5-ejecutar-el-código)
 
 ---
 
@@ -31,24 +28,7 @@ con estos puntos característicos y esta confianza"*. No sabe quién es.
 Eso es importante: El modelo ve *formas*, no *personas*.
 
 ---
-
-## 2. La API Tasks vs. la API clásica
-
-MediaPipe tuvo (y todavía tiene) dos APIs:
-
-### 2.1. API clásica: `mp.solutions`
-
-- Más simple
-- Los modelos están incluidos en el paquete de `mediapipe`
-- Está en modo "mantenimiento", Google ya no lo actualiza
-
-### 2.2. API moderna: `mediapipe.tasks`
-- Requiere descargar el modelo aparte (un `.tflite`)
-- Es la API recomendada hoy
-- Permite cambiar el modelo según lo necesario
-
----
-## 3. ¿Qué devuelve el detector?
+## 2. ¿Qué devuelve el detector?
 Por cada rostro detectado en la imagen, `resultado.detections` contiene un objeto `Detection` con:
  - **Bounding Box**
    - `origin_x` y `origin_y`: esquina superior en píxeles
@@ -65,7 +45,7 @@ Por cada rostro detectado en la imagen, `resultado.detections` contiene un objet
 - **Score** (Confianza):
     Un número entre 0.0 y 1.0 que indica cuán seguro está el modelo de que eso es una cara
 ---
-## 4. Cómo funciona el modelo por dentro
+## 3. Cómo funciona el modelo por dentro
 `blaze_face_short_range.tflite` es una red neuronal llamada BlazeFace.
 
 La idea general es:
@@ -81,7 +61,7 @@ BlazeFace tiene dos variantes:
 - **Short range**: para caras cercanas a la cámara
 - **Full range** para caras lejanas
 ---
-## 5. Requisitos e instalación
+## 4. Requisitos e instalación
 **Requisitos**
 - Python 3.9 o superior
 - Una webcam
@@ -98,7 +78,7 @@ pip install mediapipe opencv-python
 3. Decargar `blaze_face_short_range.tflite`
 4. Ponerlo en la misma carpeta que el script
 ---
-## 6. Ejecutar el código
+## 5. Ejecutar el código
 Desde la terminal, en la carpeta del proyecto:
 ``` bash
 py 01_face_detection.py

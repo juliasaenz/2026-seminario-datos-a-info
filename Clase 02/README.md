@@ -9,6 +9,9 @@ Este paquete contiene archivos de códigos independientes, uno por cada modelo d
   - [Índice](#índice)
   - [1. ¿Qué es MediaPipe?](#1-qué-es-mediapipe)
   - [2. Estructura de las carpetas](#2-estructura-de-las-carpetas)
+  - [3. La API Tasks vs. la API clásica](#3-la-api-tasks-vs-la-api-clásica)
+    - [3.1. API clásica: `mp.solutions`](#31-api-clásica-mpsolutions)
+    - [3.2. API moderna: `mediapipe.tasks`](#32-api-moderna-mediapipetasks)
 
 ---
 
@@ -30,3 +33,20 @@ Cada carpeta tiene un código de ejemplo usando alguno de los modelos de MediaPi
 7. [Object Detection](https://developers.google.com/edge/mediapipe/solutions/vision/object_detector) (Detección de objetos)
 
 Para más información sobre cada uno, ver el ejemplo en la carpeta o la documentación de MediaPipe
+
+---
+
+## 3. La API Tasks vs. la API clásica
+
+MediaPipe tuvo (y todavía tiene) dos APIs:
+
+### 3.1. API clásica: `mp.solutions`
+
+- Más simple
+- Los modelos están incluidos en el paquete de `mediapipe`
+- Está en modo "mantenimiento", Google ya no lo actualiza
+
+### 3.2. API moderna: `mediapipe.tasks`
+- Requiere descargar el modelo aparte (un `.tflite`)
+- Es la API recomendada hoy
+- Permite cambiar el modelo según lo necesario
