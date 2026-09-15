@@ -16,6 +16,8 @@ Este paquete contiene archivos de códigos independientes, uno por cada modelo d
 
 MediaPipe es una librería de Google que ofrece modelos de *machine learning* ya entrenados y optimizados para correr en tiempo real, sin necesidad de entrenar nada. Cada modelo recibe una imagen (un frame de la cámara) y devuelve información estructurada: coordenadas de puntos clave, máscaras, clasificaciones, etc. Esa información es la "materia prima" que después podemos usar para generar arte: dibujar, controlar sonido, mover partículas, disparar video, etc.
 
+---
+
 ## 2. Estructura de las carpetas
 
 Cada carpeta tiene un código de ejemplo usando alguno de los modelos de MediaPipe, junto con su propia guía en el `README.md`. Los modelos con ejemplos son:

@@ -47,6 +47,7 @@ MediaPipe tuvo (y todavía tiene) dos APIs:
 - Es la API recomendada hoy
 - Permite cambiar el modelo según lo necesario
 
+---
 ## 3. ¿Qué devuelve el detector?
 Por cada rostro detectado en la imagen, `resultado.detections` contiene un objeto `Detection` con:
  - **Bounding Box**
@@ -63,7 +64,7 @@ Por cada rostro detectado en la imagen, `resultado.detections` contiene un objet
     > Este orden es convención del modelo, no de la biblioteca, por lo que puede cambiar según el modelo
 - **Score** (Confianza):
     Un número entre 0.0 y 1.0 que indica cuán seguro está el modelo de que eso es una cara
-
+---
 ## 4. Cómo funciona el modelo por dentro
 `blaze_face_short_range.tflite` es una red neuronal llamada BlazeFace.
 
@@ -79,11 +80,12 @@ La idea general es:
 BlazeFace tiene dos variantes:
 - **Short range**: para caras cercanas a la cámara
 - **Full range** para caras lejanas
-
+---
 ## 5. Requisitos e instalación
 **Requisitos**
 - Python 3.9 o superior
 - Una webcam
+- MediaPipe y OpenCV
 
 **Dependencias**
 ```bash
@@ -95,7 +97,7 @@ pip install mediapipe opencv-python
 2. Buscar la sección **Models**
 3. Decargar `blaze_face_short_range.tflite`
 4. Ponerlo en la misma carpeta que el script
-
+---
 ## 6. Ejecutar el código
 Desde la terminal, en la carpeta del proyecto:
 ``` bash
