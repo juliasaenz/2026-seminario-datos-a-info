@@ -42,6 +42,8 @@ MediaPipe numera los puntos del 0 al 20:
 - 13-16: Anular (ring) - de la base a la punta
 - 17-20: Meñique (pinky) - de la base a la punta
 
+--- 
+
 ## 2. ¿Qué devuelve el modelo?
 El `HandLandmarkerResult` tiene:
 - **hand_landmarks**
@@ -49,10 +51,14 @@ El `HandLandmarkerResult` tiene:
 - **handedness**
     Una lista de clasificaciones de lateralidad
 
+---
+
 ## 3. Cómo funciona el modelo por dentro
 Hand Landmarker usa un modelo bundle que contiene dos modelos:
 1. **Detección de palma**: un modelo llamado BlazePalm localiza las palmas en la imagen completa. Se ejecuta solo cuando es necesario (cuando no ve ninguna mano)
 2. **Puntos de la mano**: recibe la región de la palma detectada y produce los 21 puntos de la mano. Se ejecuta en cada frame
+
+--- 
 
 ## 4. Requisitos e instalación
 **Requisitos**
@@ -70,6 +76,8 @@ pip install mediapipe opencv-python
 2. Buscar la sección Models
 3. Descargar `hand_landmarker.task`
 4. Colocarlo en la misma carpeta que el script
+
+--- 
 
 ## 5. Ejecutar el código
 Desde la terminal, en la carpeta del proyecto:
