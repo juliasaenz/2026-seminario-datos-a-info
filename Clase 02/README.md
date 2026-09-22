@@ -99,23 +99,11 @@ Cada modelo vive en su propia carpeta, con esta estructura:
 │ ├── holistic_landmarker.task
 │ └── README.md
 └── 07_object_detection/
+│ ├── 06_holistic_landmarks.py
+│ ├── holistic_landmarker.task
+│ └── README.md
 ```
 
-
-Los modelos con ejemplos son:
-
-1. [Face Detection](https://ai.google.dev/edge/mediapipe/solutions/vision/face_detector)
-   (Detección de rostros)
-2. [Face Landmarks](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker)
-   (Puntos clave de rostros)
-3. [Hand Landmarks](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker)
-   (Puntos clave de manos)
-4. [Gesture Recognition](https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer)
-   (Reconocimiento de gestos)
-5. [Pose Landmarks](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker)
-   (Puntos clave de pose)
-6. [Holistic Landmarks](https://ai.google.dev/edge/mediapipe/solutions/vision/holistic_landmarker)
-   (Puntos clave de rostro + manos + pose)
 
 **Importante**: los archivos de modelo ya vienen incluidos en cada
 carpeta. No hace falta descargarlos por separado.
