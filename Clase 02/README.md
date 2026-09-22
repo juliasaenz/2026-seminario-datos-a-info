@@ -98,10 +98,6 @@ Cada modelo vive en su propia carpeta, con esta estructura:
 │ ├── 06_holistic_landmarks.py
 │ ├── holistic_landmarker.task
 │ └── README.md
-└── 07_object_detection/
-│ ├── 06_holistic_landmarks.py
-│ ├── holistic_landmarker.task
-│ └── README.md
 ```
 
 
