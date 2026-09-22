@@ -441,7 +441,8 @@ def main():
     # Configuración del detector
     opciones = vision.GestureRecognizerOptions(
         base_options=python.BaseOptions(
-            model_asset_path=str(MODEL_PATH)
+            model_asset_path=str(MODEL_PATH),
+            delegate=python.BaseOptions.Delegate.CPU,
         ),
         running_mode=vision.RunningMode.VIDEO,
         num_hands=NUM_HANDS,

@@ -475,7 +475,8 @@ def main():
     # Configuración del detector
     opciones = vision.HolisticLandmarkerOptions(
         base_options=python.BaseOptions(
-            model_asset_path=str(MODEL_PATH)
+            model_asset_path=str(MODEL_PATH),
+            delegate=python.BaseOptions.Delegate.CPU,
         ),
         running_mode=vision.RunningMode.VIDEO,
         min_face_detection_confidence=MIN_FACE_DETECTION_CONFIDENCE,

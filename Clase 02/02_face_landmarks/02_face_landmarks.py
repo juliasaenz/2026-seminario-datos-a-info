@@ -92,8 +92,8 @@ CAMARA_INDEX = 0
 
 # Resolución de captura pedida a la cámara (la cámara puede no respetarla
 # exactamente; depende del driver / hardware)
-ANCHO_CAPTURA = 1080
-ALTO_CAPTURA = 720
+ANCHO_CAPTURA = 720
+ALTO_CAPTURA = 480
 
 
 # =============================================================================
@@ -573,7 +573,8 @@ def main():
     # Configuración del detector
     opciones = vision.FaceLandmarkerOptions(
         base_options=python.BaseOptions(
-            model_asset_path=str(MODEL_PATH)
+            model_asset_path=str(MODEL_PATH),
+            delegate=python.BaseOptions.Delegate.CPU,
         ),
         running_mode=vision.RunningMode.VIDEO,
         num_faces=NUM_FACES,
